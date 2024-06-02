@@ -4,10 +4,6 @@ const generateBtn = document.getElementById('generate_btn');
 
 
 
-
-
-
-
 let quotes = [
     {
         quote : "That it will never come again is what makes life so sweet.",
@@ -37,20 +33,28 @@ let quotes = [
         quote : "Don't let your happiness depend on something you may lose.",
         author : "C.S. Lewis"
     },
+    {
+        quote : "make hay while the sun shine",
+        author : "C.S. Lewis"
+    },
+    {
+        quote : "wshbdjgfnjnfjnkjdkgnbjnjn",
+        author : "C.S. Lewis"
+    },
 ]
 
 
 
-
-
-generateBtn.onclick=()=>{
-
+generateBtn.onclick=()=>{ 
+    
+    let quoteLength = quotes.length;
     let ranNum = Math.random();
-    let num = Math.floor(ranNum * 7)
+    let num = Math.floor(ranNum * quoteLength)
     let theQuote = quotes[num].quote
     let theAuthor = quotes[num].author
-    // console.log(theAuthor)
-    // console.log(theQuote)
-    quoteText.innerHTML = theQuote
+    quoteText.innerText = theQuote
     quoteAuthor.innerHTML = theAuthor
 }
+
+
+
